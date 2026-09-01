@@ -21,3 +21,5 @@ x = 42
 print(math.sin(x)**2+math.cos(x)**2) ##should equal 1
 print((2+3*6)/10-5) ##-3
 
+### \n splits the line to the line below
+print("a really long statement \nthat would exceed 80 characters")
