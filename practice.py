@@ -37,16 +37,16 @@ result = create_name()
 print(result)
 
 
-### calculator
+### calculator and \n at the end to have the user input below the question
 
 import math
 
 print("-"*80)
 
-item=(input("What item did you buy? "))
-price_item=(float(input(f"How much did the {item} cost? ")))
-item_amount=int(input(f"How many {item} did you buy? "))
-sales_tax=(float(input("What is the sales tax percentage? ")))
+item=(input("What item did you buy?\n"))
+price_item=(float(input(f"How much did the {item} cost?\n" )))
+item_amount=int(input(f"How many {item} did you buy?\n" ))
+sales_tax=(float(input("What is the sales tax percentage?\n" )))
 
 tax_rate=sales_tax/100
 subtotal=price_item*item_amount
