@@ -53,6 +53,8 @@ subtotal=price_item*item_amount
 tax=tax_rate*subtotal
 total=tax+subtotal
 
+### Grade calculator
+
 print("="*80)
 print("RECEIPT")
 print("="*80)
@@ -62,3 +64,35 @@ print(f"Subtotal: ${subtotal:.2f}")
 print(f"Tax ({sales_tax}%): ${tax:.2f}")
 print(f"Total: ${total:.2f}")
 
+score = float(input("Enter your score (0-100): \n"))
+
+print("*"*80)
+print(" "*34, "GRADE REPORT")
+print("_"*80)
+
+if score < 0 or score > 100:
+    print("Please enter a valid score between 0 and 100")
+elif score == 100:
+    grade = "A"
+    feedback = "And they say nobody's perfect!"
+elif score >= 90:
+    grade = "A"
+    feedback = "Fantastic Effort!"
+elif score >= 80:
+    grade = "B"
+    feedback = "Well Done!"
+elif score >= 70:
+    grade = "C"
+    feedback = "Adequate job."
+elif score >= 60:
+    grade = "D"
+    feedback = "This could be improved"
+else:
+    grade = "F"
+    feedback = "Unsatisfactory"
+
+if 0 <= score <= 100:
+    print(f"Score: {score}")
+    print(f"Grade: {grade}")
+    print(f"Feedback: {feedback}")
+print("*"*80)
