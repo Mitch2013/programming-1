@@ -96,3 +96,24 @@ if 0 <= score <= 100:
     print(f"Grade: {grade}")
     print(f"Feedback: {feedback}")
 print("*"*80)
+
+# 'greeting' has a default argument of "Hello"
+# 'punctuation' has a default argument of "!"
+def greet(name, greeting="Hello", punctuation="!"):
+    return f"{greeting}, {name}{punctuation}"
+
+# 1. Use both default arguments
+print(greet("Alice"))  
+# Output: Hello, Alice!
+
+# 2. Override only the first default argument
+print(greet("Bob", "Good morning"))  
+# Output: Good morning, Bob!
+
+# 3. Override both default arguments
+print(greet("Charlie", "Welcome", "."))  
+# Output: Welcome, Charlie.
+
+# 4. Override a specific default argument using a keyword argument
+print(greet("Dana", punctuation="?"))  
+# Output: Hello, Dana?
